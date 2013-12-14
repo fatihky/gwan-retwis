@@ -535,7 +535,7 @@ LINE_
 LINE_
     freeReplyObject(rr2);
 
-    rr2 = redisCommand(rc, "HSET uid:%lu auth %s", uid,  cookie_buf->ptr);
+    rr2 = redisCommand(rc, "HMSET uid:%lu auth %s username %s", uid,  cookie_buf->ptr, username);
 LINE_
     freeReplyObject(rr2);
 
