@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     default: return 503;
   }
   
-  char *uid == NULL;
+  char *uid = NULL;
   char *username = NULL;
   int auth = is_member(argv, data, &uid);
 
