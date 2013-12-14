@@ -444,30 +444,40 @@ int add_user (int argc, char *argv[], data_t *data, xbuf_t *reply)
   char *username = "";
   char *pass = "";
   char *pass_verify = "";
+SATIR_
   get_arg("username=", &username, argc, argv);
+SATIR_
   get_arg("password=", &pass, argc, argv);
+SATIR_
   get_arg("password_verify=", &pass_verify, argc, argv);
 
   if(strlen(username) < 1) goto please_fill_form;
+SATIR_
   if(strstr(username, " ")) goto uname_cant_contain_space;  
+SATIR_
   if(strlen(pass) < 1) goto please_fill_form;
+SATIR_
   if(strlen(pass_verify) < 1) goto please_fill_form;
 
   redisContext *rc = data->rc[cur_worker()];
   redisReply *rr = redisCommand(rc, "EXISTS username:%s:uid", username);
   if(rr == NULL) return 503;
+SATIR_
  
   xbuf_ncat(reply, data->register_page->ptr, data->register_page->len);
   if(rr->integer == 1)
   {
+SATIR_
     xbuf_repl(reply, "<!--title-->", "Register / Login- retwis-c");
     xbuf_repl(reply, "<!--content-->", REGISTER_FORM);
     xbuf_repl(reply, "<!--form_errors-->", "[username] is already registered.</br>");
     xbuf_repl(reply, "[username]", username);
+SATIR_
     return 200;
   }
   else
   {
+SATIR_
     xbuf_t *pass_sha = to_sha2(pass);
     u64 uid = nextUserId(argv, data);
 
@@ -502,14 +512,16 @@ int add_user (int argc, char *argv[], data_t *data, xbuf_t *reply)
 
     return 200;
   }
+SATIR_
   freeReplyObject(rr);
-printf("%d. satırda...", __LINE__);
   return 500; // internal server error
 
 please_fill_form:
+SATIR_
   xbuf_ncat(reply, data->register_page->ptr, data->register_page->len);
   xbuf_repl(reply, "<!--title-->", "Register / Login- retwis-c");
   xbuf_repl(reply, "<!--content-->", "Please fill form.</br>[form]");
+SATIR_
   return 200;
 
 uname_cant_contain_space:
@@ -517,6 +529,7 @@ uname_cant_contain_space:
   xbuf_repl(reply, "<!--title-->", "Register / Login- retwis-c");
   xbuf_repl(reply, "<!--content-->", "Username can not contain spaces.</br>[form]");
   xbuf_repl(reply, "[form]", REGISTER_FORM);
+SATIR_
   return 200;
 }
 
