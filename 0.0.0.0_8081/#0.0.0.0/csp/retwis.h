@@ -489,6 +489,8 @@ LINE_
     redisReply *rr2 = redisCommand(rc,
      "HMSET uid:%llu username %s pass %s"
     , uid, username, pass_sha->ptr);
+if (rr2 == NULL) LINE_
+	
     freeReplyObject(rr2);
 LINE_
     rr2 = redisCommand(rc, "SET username:%s:uid %llu"
