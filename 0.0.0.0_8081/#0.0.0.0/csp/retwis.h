@@ -14,7 +14,7 @@
 #include <hiredis/hiredis.h>
 #include "gwan.h"
 
-#define SATIR_ printf("{%s}{%d}\n", __func__, __LINE__);
+#define LINE_ printf("{%s}{%d}\n", __func__, __LINE__);
 
 #define cur_worker() \
   (int) get_env( argv, CUR_WORKER )
@@ -375,11 +375,15 @@ int update_timeline (char *argv[], data_t *data, char *whom)
 u64 nextUserId (char *argv[], data_t *data)
 {
   u64 id = 0;
+LINE_
   redisReply *rr = redisCommand(data->rc[cur_worker()],
      "INCR global:nextUserId");
+LINE_
   if (rr == NULL) return 0; // fail
   id = rr->integer;
+LINE_
   freeReplyObject(rr);
+LINE_
   return id;
 }
 
@@ -444,53 +448,58 @@ int add_user (int argc, char *argv[], data_t *data, xbuf_t *reply)
   char *username = "";
   char *pass = "";
   char *pass_verify = "";
-SATIR_
+LINE_
   get_arg("username=", &username, argc, argv);
-SATIR_
+LINE_
   get_arg("password=", &pass, argc, argv);
-SATIR_
+LINE_
   get_arg("password_verify=", &pass_verify, argc, argv);
 
   if(strlen(username) < 1) goto please_fill_form;
-SATIR_
+LINE_
   if(strstr(username, " ")) goto uname_cant_contain_space;  
-SATIR_
+LINE_
   if(strlen(pass) < 1) goto please_fill_form;
-SATIR_
+LINE_
   if(strlen(pass_verify) < 1) goto please_fill_form;
 
   redisContext *rc = data->rc[cur_worker()];
   redisReply *rr = redisCommand(rc, "EXISTS username:%s:uid", username);
   if(rr == NULL) return 503;
-SATIR_
+LINE_
  
   xbuf_ncat(reply, data->register_page->ptr, data->register_page->len);
   if(rr->integer == 1)
   {
-SATIR_
+LINE_
     xbuf_repl(reply, "<!--title-->", "Register / Login- retwis-c");
     xbuf_repl(reply, "<!--content-->", REGISTER_FORM);
     xbuf_repl(reply, "<!--form_errors-->", "[username] is already registered.</br>");
     xbuf_repl(reply, "[username]", username);
-SATIR_
+LINE_
     return 200;
   }
   else
   {
-SATIR_
+LINE_
     xbuf_t *pass_sha = to_sha2(pass);
     u64 uid = nextUserId(argv, data);
 
+LINE_
     redisReply *rr2 = redisCommand(rc,
      "HMSET uid:%llu username %s pass %s"
     , uid, username, pass_sha->ptr);
     freeReplyObject(rr2);
+LINE_
     rr2 = redisCommand(rc, "SET username:%s:uid %llu"
+LINE_
                          , username, uid);
     freeReplyObject(rr2);
+LINE_
 
     rr2 = redisCommand(rc, "SADD uid:%llu:following %llu"
                          , uid, uid);
+LINE_
     freeReplyObject(rr2);
 
     xbuf_free(pass_sha);
@@ -500,28 +509,33 @@ SATIR_
 
     // Send cookie to user
     xbuf_t *cookie_buf;
+LINE_
     xbuf_t *cookie_header = gw_gen_cookie_header(username, &cookie_buf);
     http_header(HEAD_ADD, cookie_header->ptr, cookie_header->len, argv);
+LINE_
     rr2 = redisCommand(rc, "SET auth:%s %llu", cookie_buf->ptr, uid);
+LINE_
     freeReplyObject(rr2);
 
     rr2 = redisCommand(rc, "HSET uid:%llu auth %s", uid,  cookie_buf->ptr);
+LINE_
     freeReplyObject(rr2);
 
+LINE_
     xbuf_free(cookie_header);
 
     return 200;
   }
-SATIR_
+LINE_
   freeReplyObject(rr);
   return 500; // internal server error
 
 please_fill_form:
-SATIR_
+LINE_
   xbuf_ncat(reply, data->register_page->ptr, data->register_page->len);
   xbuf_repl(reply, "<!--title-->", "Register / Login- retwis-c");
   xbuf_repl(reply, "<!--content-->", "Please fill form.</br>[form]");
-SATIR_
+LINE_
   return 200;
 
 uname_cant_contain_space:
@@ -529,7 +543,7 @@ uname_cant_contain_space:
   xbuf_repl(reply, "<!--title-->", "Register / Login- retwis-c");
   xbuf_repl(reply, "<!--content-->", "Username can not contain spaces.</br>[form]");
   xbuf_repl(reply, "[form]", REGISTER_FORM);
-SATIR_
+LINE_
   return 200;
 }
 
