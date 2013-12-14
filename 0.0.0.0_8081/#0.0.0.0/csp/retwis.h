@@ -400,12 +400,18 @@ u64 nextPostId (char *argv[], data_t *data)
 
 xbuf_t *to_sha2 (char *input)
 {
+LINE_
   u8 result[32];
   xbuf_t *xbuf = (xbuf_t *) malloc(sizeof(xbuf_t));
+LINE_
   xbuf_init (xbuf); // important!
+LINE_
   if(!xbuf) return NULL;
+LINE_
   sha2((u8 *)input, strlen((const char *)input), result);
+LINE_
   xbuf_xcat(xbuf, "%32B", result);
+LINE_
   return xbuf;
 }
 
