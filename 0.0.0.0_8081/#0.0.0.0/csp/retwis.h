@@ -500,7 +500,6 @@ if(uid == 0) printf("(uid == 0)\n");
 printf("HMSET uid:%llu username %s pass %s\n"
     , uid, username, pass_sha->ptr);
 
- redisReply *rr2;
      redisReply *rr2 = redisCommand(rc,
      "HMSET uid:%lu username %s pass %s"
     , uid, username, pass_sha->ptr);
