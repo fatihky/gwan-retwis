@@ -502,7 +502,8 @@ printf("HMSET uid:%llu username %s pass %s\n"
      redisReply *rr2 = redisCommand(rc,
      "HMSET uid:%llu username %s pass %s"
     , uid, username, pass_sha->ptr);
-if(rr2) LINE_
+if (rr2) LINE_
+if (!rr2) LINE_
 if (rr2 == NULL) LINE_
 
     freeReplyObject(rr2);
