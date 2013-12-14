@@ -503,6 +503,7 @@ int add_user (int argc, char *argv[], data_t *data, xbuf_t *reply)
     return 200;
   }
   freeReplyObject(rr);
+printf("%d. satırda...", __LINE__);
   return 500; // internal server error
 
 please_fill_form:
