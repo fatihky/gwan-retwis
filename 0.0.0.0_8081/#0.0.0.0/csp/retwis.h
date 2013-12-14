@@ -508,7 +508,7 @@ if (rr2) LINE_
 if (!rr2) LINE_
 if (rr2 == NULL) LINE_
 
-    freeReplyObject(rr2);
+//    freeReplyObject(rr2);
 LINE_
     rr2 = redisCommand(rc, "SET username:%s:uid %llu"
                          , username, uid);
