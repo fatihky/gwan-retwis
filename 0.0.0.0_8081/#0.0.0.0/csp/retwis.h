@@ -501,22 +501,22 @@ printf("HMSET uid:%llu username %s pass %s\n"
     , uid, username, pass_sha->ptr);
 
  redisReply *rr2;
-//     redisReply *rr2 = redisCommand(rc,
-//     "HMSET uid:%llu username %s pass %s"
-//    , uid, username, pass_sha->ptr);
+     redisReply *rr2 = redisCommand(rc,
+     "HMSET uid:%lu username %s pass %s"
+    , uid, username, pass_sha->ptr);
 LINE_
 if (rr2) LINE_
 if (!rr2) LINE_
 if (rr2 == NULL) LINE_
 
-//    freeReplyObject(rr2);
+    freeReplyObject(rr2);
 LINE_
-    rr2 = redisCommand(rc, "SET username:%s:uid %llu"
+    rr2 = redisCommand(rc, "SET username:%s:uid %lu"
                          , username, uid);
     freeReplyObject(rr2);
 LINE_
 
-    rr2 = redisCommand(rc, "SADD uid:%llu:following %llu"
+    rr2 = redisCommand(rc, "SADD uid:%lu:following %lu"
                          , uid, uid);
 LINE_
     freeReplyObject(rr2);
