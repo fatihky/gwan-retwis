@@ -492,11 +492,12 @@ LINE_
     u64 uid = nextUserId(argv, data);
 
 LINE_
+if(pass_sha == NULL) printf("pass_sha is null\n");
     redisReply *rr2 = redisCommand(rc,
      "HMSET uid:%llu username %s pass %s"
     , uid, username, pass_sha->ptr);
 if (rr2 == NULL) LINE_
-	
+
     freeReplyObject(rr2);
 LINE_
     rr2 = redisCommand(rc, "SET username:%s:uid %llu"
@@ -621,8 +622,8 @@ int login (int argc, char *argv[], data_t *data)
 
         xbuf_free(header);
       }
-//      static char redir[] = "Location: /?profile\r\n\r\n";
-//      http_header(HEAD_ADD, redir, sizeof(redir) - 1, argv);
+  //      static char redir[] = "Location: /?profile\r\n\r\n";
+  //      http_header(HEAD_ADD, redir, sizeof(redir) - 1, argv);
       free(uid);
       return 302; // return an HTTP code (302:'Found')
     }
@@ -713,13 +714,6 @@ xbuf_t *get_timeline (char *argv[], data_t *data, char *uid, int from, int to)
   if(username != NULL) free(username);
   return out;
 }
-
-
-
-
-
-
-
 
 xbuf_t *get_posts (char *argv[], data_t *data, char *uid, int from, int to)
 {
