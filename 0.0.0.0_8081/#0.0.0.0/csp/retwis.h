@@ -328,7 +328,7 @@ static inline bool is_member (char *argv[], data_t *data, char **uid_dst)
     return true;
   }
 
-  freeReplyObject(rr);
+  if(rr != NULL) freeReplyObject(rr);
   return false;
 }
 
