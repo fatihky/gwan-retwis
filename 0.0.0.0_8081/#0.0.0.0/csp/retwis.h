@@ -496,6 +496,9 @@ if(pass_sha == NULL) printf("pass_sha is null\n");
 if(pass_sha->ptr == NULL) printf("pass_sha->ptr is null\n");
 if(username == NULL) printf("username is null\n");
 if(uid == 0) printf("(uid == 0)\n");
+printf("HMSET uid:%llu username %s pass %s"
+    , uid, username, pass_sha->ptr);
+
      redisReply *rr2 = redisCommand(rc,
      "HMSET uid:%llu username %s pass %s"
     , uid, username, pass_sha->ptr);
