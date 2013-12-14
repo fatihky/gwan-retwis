@@ -940,6 +940,8 @@ bool is_following (char *argv[], data_t *data, char *who, char *to_who)
 
 char *get_username(RETARGS_, char *uid)
 {
+  if(uid == NULL) return NULL;
+
   redisContext *rc = data->rc[cur_worker()];
   redisReply *rr;
   char *username;

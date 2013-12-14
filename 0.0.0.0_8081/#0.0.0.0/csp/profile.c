@@ -75,11 +75,15 @@ LINE_
   get_arg("user=", &username, argc, argv);
 LINE_
   size_t username_len = strlen(username);
+LINE_
 
   // is this page viewing user's profile?
   bool this_page_is_viewing_users = false;
+LINE_
   char *username2 = get_username(RA_, uid);
+LINE_
   if(strcmp(username, username2) == 0) this_page_is_viewing_users = true;
+LINE_
 
   if(username_len != 0)
   {
