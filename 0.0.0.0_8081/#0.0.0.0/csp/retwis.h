@@ -121,8 +121,8 @@ xbuf_t *get_timeline (RETARGS_, char *uid, int from, int to);
 xbuf_t *get_posts (RETARGS_, char *uid, int from, int to);
 xbuf_t *get_posts_anonymous (RETARGS_, char *uid, int from, int to);
 xbuf_t *get_posts_by_username (RETARGS_, char *username, int from, int to);
-int add_post (RETARGS_, char *from, char *body, u64 *id_dst);
-void del_post (RETARGS_, char *uid, u64 id);
+int add_post (RETARGS_, char *from, char *body, u32 *id_dst);
+void del_post (RETARGS_, char *uid, u32 id);
 int follow (RETARGS_, char *from, char *to);
 int unfollow (RETARGS_, char *from, char *to);
 bool is_following (RETARGS_, char *who, char *to_who);
@@ -372,9 +372,9 @@ int update_timeline (char *argv[], data_t *data, char *whom)
   return 0;
 }
 
-u64 nextUserId (char *argv[], data_t *data)
+u32 nextUserId (char *argv[], data_t *data)
 {
-  u64 id = 0;
+  u32 id = 0;
 LINE_
   redisReply *rr = redisCommand(data->rc[cur_worker()],
      "INCR global:nextUserId");
@@ -387,9 +387,9 @@ LINE_
   return id;
 }
 
-u64 nextPostId (char *argv[], data_t *data)
+u32 nextPostId (char *argv[], data_t *data)
 {
-  u64 id = 0;
+  u32 id = 0;
   redisReply *rr = redisCommand(data->rc[cur_worker()],
      "INCR global:nextPostId");
   if (rr == NULL) return 0; // fail
@@ -489,7 +489,7 @@ LINE_
   {
 LINE_
     xbuf_t *pass_sha = to_sha2(pass);
-    u64 uid = nextUserId(argv, data);
+    u32 uid = nextUserId(argv, data);
 
 LINE_
 if(pass_sha == NULL) printf("pass_sha is null\n");
@@ -779,11 +779,11 @@ xbuf_t *get_posts_by_username (char *argv[], data_t *data, char *username, int f
   return out;
 }
 
-int add_post (char *argv[], data_t *data, char *from, char *body, u64 *id_dst)
+int add_post (char *argv[], data_t *data, char *from, char *body, u32 *id_dst)
 {
   redisContext *rc = data->rc[cur_worker()];
   redisReply *rr;
-  u64 id = nextPostId(argv, data);
+  u32 id = nextPostId(argv, data);
   char *username;
 
   if(id_dst) *id_dst = id;
@@ -834,7 +834,7 @@ int add_post (char *argv[], data_t *data, char *from, char *body, u64 *id_dst)
   return 0;
 }
 
-void del_post(char *argv[], data_t *data, char *uid, u64 id)
+void del_post(char *argv[], data_t *data, char *uid, u32 id)
 {
   redisContext *rc = data->rc[cur_worker()];
   redisReply *rr = redisCommand(rc, "HGET post:%lu uid", id);
@@ -876,7 +876,7 @@ void del_post(char *argv[], data_t *data, char *uid, u64 id)
 
 int follow (char *argv[], data_t *data, char *from, char *to)
 {
-  u64 rep;
+  u32 rep;
   redisContext *rc = data->rc[cur_worker()];
   redisReply *rr = redisCommand(rc, "SADD uid:%s:following %s", from, to);
   if (rr == NULL) return -1;
@@ -900,7 +900,7 @@ int follow (char *argv[], data_t *data, char *from, char *to)
 
 int unfollow (char *argv[], data_t *data, char *from, char *to)
 {
-  u64 rep;
+  u32 rep;
   redisContext *rc = data->rc[cur_worker()];
   redisReply *rr;
 
