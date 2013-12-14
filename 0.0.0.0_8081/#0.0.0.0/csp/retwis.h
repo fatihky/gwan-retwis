@@ -492,7 +492,6 @@ LINE_
     freeReplyObject(rr2);
 LINE_
     rr2 = redisCommand(rc, "SET username:%s:uid %llu"
-LINE_
                          , username, uid);
     freeReplyObject(rr2);
 LINE_
