@@ -82,7 +82,7 @@ LINE_
 LINE_
   char *username2 = get_username(RA_, uid);
 LINE_
-  if(strcmp(username, username2) == 0) this_page_is_viewing_users = true;
+  if(username_len && strcmp(username, username2) == 0) this_page_is_viewing_users = true;
 LINE_
 
   if(username_len != 0)
