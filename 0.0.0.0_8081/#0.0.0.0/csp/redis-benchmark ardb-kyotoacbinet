@@ -1,0 +1,168 @@
+g++ -o ardb-server ardb_server.o lua_scripting.o transaction.o slowlog.o clients.o replication/rdb.o replication/slave.o replication/repl_backlog.o replication/master.o ha/agent.o pubsub.o  main.o  ardb.o ardb_data.o hash.o kv.o lists.o logger.o sets.o zsets.o strings.o bits.o table.o sort.o  ./util/buffer.o  ./util/buffer_helper.o  ./util/config_helper.o  ./util/datagram_packet.o  ./util/file_helper.o  ./util/math_helper.o  ./util/mmap.o  ./util/network_helper.o  ./util/socket_address.o  ./util/string_helper.o  ./util/system_helper.o  ./util/time_helper.o  ./util/exception/api_exception.o  ./util/thread/thread.o  ./util/rand.o  ./util/sha1.o  ./redis/crc64.o  ./redis/endianconv.o  ./redis/intset.o  ./redis/lzf_c.o  ./redis/lzf_d.o  ./redis/ziplist.o  ./redis/zipmap.o  channel/channel.o  channel/channel_handler_context.o  channel/channel_helper.o  channel/channel_pipeline.o  channel/channel_service.o  channel/socket/clientsocket_channel.o  channel/socket/datagram_channel.o  channel/socket/serversocket_channel.o  channel/socket/socket_channel.o  channel/fifo/fifo_channel.o  channel/codec/delimiter_frame_decoder.o  channel/codec/int_header_frame_decoder.o  channel/codec/redis_command_codec.o  channel/codec/redis_reply_codec.o  channel/timer/timer_channel.o  channel/timer/timer.o  channel/timer/timer_task_queue.o  channel/signal/signal_channel.o  channel/signal/soft_signal_channel.o  channel/zookeeper/zookeeper_client.o  channel/redis/ae.o  channel/redis/zmalloc.o engine/kyotocabinet_engine.o      /home/fatih/d/ardb-/src/../deps/kyotocabinet-1.2.76/libkyotocabinet.a /home/fatih/d/ardb-/src/../deps/lua/src/liblua.a /home/fatih/d/ardb-/src/../deps/zookeeper-3.4.5/.libs/libzkst.a /home/fatih/d/ardb-/src/../deps/zookeeper-3.4.5/.libs/libhashtable.a /home/fatih/d/ardb-/src/../deps/jemalloc-3.3.1/lib/libjemalloc.a -lpthread -lz
+replication/rdb.o: In function `ardb::ArdbDumpFile::Flush()':
+/home/fatih/d/ardb-/src/replication/rdb.cpp:1365: undefined reference to `snappy::Compress(char const*, unsigned long, std::string*)'
+replication/rdb.o: In function `ardb::ArdbDumpFile::Load(void (*)(void*), void*)':
+
+
+====== PING_INLINE ======
+  10000 requests completed in 10.23 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 148 milliseconds
+54.62% <= 2793 milliseconds
+100.00% <= 2793 milliseconds
+977.61 requests per second
+
+====== PING_BULK ======
+  10000 requests completed in 5.86 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 3883 milliseconds
+46.82% <= 3923 milliseconds
+76.61% <= 3975 milliseconds
+100.00% <= 3975 milliseconds
+1707.65 requests per second
+
+====== SET ======
+  10000 requests completed in 9.94 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 2629 milliseconds
+26.22% <= 2643 milliseconds
+45.88% <= 2663 milliseconds
+65.54% <= 2688 milliseconds
+78.64% <= 2717 milliseconds
+91.74% <= 2749 milliseconds
+98.29% <= 2786 milliseconds
+100.00% <= 2786 milliseconds
+1005.53 requests per second
+
+====== GET ======
+  10000 requests completed in 4.95 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 592 milliseconds
+28.10% <= 608 milliseconds
+52.07% <= 629 milliseconds
+68.05% <= 648 milliseconds
+84.03% <= 683 milliseconds
+92.02% <= 723 milliseconds
+100.00% <= 723 milliseconds
+2018.57 requests per second
+
+====== INCR ======
+  10000 requests completed in 8.54 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 672 milliseconds
+28.50% <= 692 milliseconds
+49.87% <= 760 milliseconds
+71.24% <= 784 milliseconds
+85.48% <= 825 milliseconds
+92.89% <= 933 milliseconds
+100.00% <= 933 milliseconds
+1170.96 requests per second
+
+====== LPUSH ======
+  10000 requests completed in 4.81 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 753 milliseconds
+27.31% <= 764 milliseconds
+54.61% <= 790 milliseconds
+72.81% <= 823 milliseconds
+90.91% <= 863 milliseconds
+100.00% <= 863 milliseconds
+2079.00 requests per second
+
+====== LPOP ======
+  10000 requests completed in 2.83 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 674 milliseconds
+37.81% <= 695 milliseconds
+63.01% <= 717 milliseconds
+87.41% <= 755 milliseconds
+100.00% <= 755 milliseconds
+3539.82 requests per second
+
+====== SADD ======
+  10000 requests completed in 10.67 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 1031 milliseconds
+23.00% <= 1050 milliseconds
+45.99% <= 1067 milliseconds
+63.23% <= 1093 milliseconds
+77.04% <= 1125 milliseconds
+88.53% <= 1165 milliseconds
+94.27% <= 1212 milliseconds
+100.00% <= 1212 milliseconds
+937.56 requests per second
+
+====== SPOP ======
+  10000 requests completed in 3.74 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 752 milliseconds
+39.33% <= 777 milliseconds
+65.54% <= 811 milliseconds
+86.91% <= 857 milliseconds
+100.00% <= 857 milliseconds
+2672.37 requests per second
+
+====== LPUSH (needed to benchmark LRANGE) ======
+  10000 requests completed in 4.76 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 1333 milliseconds
+27.31% <= 1348 milliseconds
+54.61% <= 1375 milliseconds
+72.81% <= 1408 milliseconds
+90.91% <= 1448 milliseconds
+100.00% <= 1448 milliseconds
+2100.84 requests per second
+
+====== LRANGE_100 (first 100 elements) ======
+  10000 requests completed in 58.96 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 621 milliseconds
+13.57% <= 668 milliseconds
+26.22% <= 728 milliseconds
+37.97% <= 820 milliseconds
+48.81% <= 911 milliseconds
+58.75% <= 1018 milliseconds
+67.50% <= 1138 milliseconds
+74.73% <= 1277 milliseconds
+81.05% <= 1445 milliseconds
+86.47% <= 1641 milliseconds
+90.99% <= 1825 milliseconds
+94.60% <= 2055 milliseconds
+97.31% <= 2269 milliseconds
+99.11% <= 2507 milliseconds
+100.00% <= 2507 milliseconds
+169.60 requests per second
+

@@ -1,0 +1,898 @@
+Wed, 27 Nov 2013 09:28:46 GMT: start
+Wed, 27 Nov 2013 09:28:50 GMT: exit(1): * can't start workers
+Wed, 27 Nov 2013 09:29:26 GMT: start
+Wed, 27 Nov 2013 09:30:15 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 09:30:16 GMT: start
+Wed, 27 Nov 2013 09:35:44 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 09:35:45 GMT: start
+Wed, 27 Nov 2013 09:50:36 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 09:50:36 GMT: start
+Wed, 27 Nov 2013 09:50:37 GMT: exit(1): Error(s) in timeline.c
+Wed, 27 Nov 2013 09:51:16 GMT: start
+Wed, 27 Nov 2013 09:51:16 GMT: exit(1): Error(s) in timeline.c
+Wed, 27 Nov 2013 09:51:31 GMT: start
+Wed, 27 Nov 2013 09:51:31 GMT: exit(1): Error(s) in timeline.c
+Wed, 27 Nov 2013 09:51:59 GMT: start
+Wed, 27 Nov 2013 09:52:00 GMT: exit(1): Error(s) in timeline.c
+Wed, 27 Nov 2013 09:52:18 GMT: start
+Wed, 27 Nov 2013 09:56:57 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 09:56:58 GMT: start
+Wed, 27 Nov 2013 09:56:59 GMT: exit(1): Error(s) in profile.c
+Wed, 27 Nov 2013 09:58:43 GMT: start
+Wed, 27 Nov 2013 09:58:43 GMT: exit(1): Error(s) in profile.c
+Wed, 27 Nov 2013 09:59:01 GMT: start
+Wed, 27 Nov 2013 10:02:35 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:02:36 GMT: start
+Wed, 27 Nov 2013 10:02:36 GMT: exit(1): Error(s) in profile.c
+Wed, 27 Nov 2013 10:02:49 GMT: start
+Wed, 27 Nov 2013 10:05:20 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:05:21 GMT: start
+Wed, 27 Nov 2013 10:05:21 GMT: exit(1): Error(s) in profile.c
+Wed, 27 Nov 2013 10:06:14 GMT: start
+Wed, 27 Nov 2013 10:06:14 GMT: exit(1): Error(s) in profile.c
+Wed, 27 Nov 2013 10:06:57 GMT: start
+Wed, 27 Nov 2013 10:09:39 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:09:41 GMT: start
+Wed, 27 Nov 2013 10:10:14 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:10:23 GMT: start
+Wed, 27 Nov 2013 10:10:47 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:10:48 GMT: start
+Wed, 27 Nov 2013 10:12:31 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:12:34 GMT: start
+Wed, 27 Nov 2013 10:12:37 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:13:39 GMT: start
+Wed, 27 Nov 2013 10:15:33 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:15:34 GMT: start
+Wed, 27 Nov 2013 10:16:36 GMT: start
+Wed, 27 Nov 2013 10:16:51 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:54153
+request       : /?profile
+----------------
+----------------
+Wed, 27 Nov 2013 10:16:52 GMT: 0x00007f0eadee041d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 9288 "gwan" 0x00007f0eadee041d in ?? ()
+
+Thread 1 (process 9288):
+#0  0x00007f0eadee041d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 00006666666f
+
+Registers     : EAX=000066666667 CS=00000033 EIP=00000042fa72 EFLGS=000000010246
+                EBX=000000000001 SS=00000000 ESP=7f0ea8548d38 EBP=000000000000
+                ECX=000000000001 DS=00000000 ESI=7f0ea8548e40 FS=00000033
+                EDX=000066266666 ES=00000000 EDI=7f0ea8548e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 10:17:54 GMT: start
+Wed, 27 Nov 2013 10:18:12 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:18:13 GMT: start
+Wed, 27 Nov 2013 10:18:20 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:19:19 GMT: start
+Wed, 27 Nov 2013 10:20:04 GMT: start
+Wed, 27 Nov 2013 10:20:22 GMT: start
+Wed, 27 Nov 2013 10:20:29 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 1/2
+state         : SEND
+client        : 127.0.0.1:55945
+request       : /?profile
+----------------
+----------------
+Wed, 27 Nov 2013 10:20:29 GMT: warning: no loadable sections found in added symbol-file /home/fatih/gwan-retwis_2/gwan
+0x00007f1f438c141d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 9992 "gwan" 0x00007f1f438c141d in ?? ()
+
+Thread 1 (process 9992):
+#0  0x00007f1f438c141d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 1
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 00006666666f
+
+Registers     : EAX=000066666667 CS=00000033 EIP=00000042fa72 EFLGS=000000010246
+                EBX=000000000001 SS=00000000 ESP=7f1f3d529d38 EBP=000000000000
+                ECX=000000000001 DS=00000000 ESI=7f1f3d529e40 FS=00000033
+                EDX=000066266666 ES=00000000 EDI=7f1f3d529e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 10:21:12 GMT: start
+Wed, 27 Nov 2013 10:21:18 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 1/2
+state         : SEND
+client        : 127.0.0.1:56713
+request       : /?profile
+----------------
+----------------
+Wed, 27 Nov 2013 10:21:18 GMT: warning: no loadable sections found in added symbol-file /home/fatih/gwan-retwis_2/gwan
+0x00007fd0fb90b41d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 10160 "gwan" 0x00007fd0fb90b41d in ?? ()
+
+Thread 1 (process 10160):
+#0  0x00007fd0fb90b41d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 1
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 00006666666f
+
+Registers     : EAX=000066666667 CS=00000033 EIP=00000042fa72 EFLGS=000000010246
+                EBX=000000000001 SS=00000000 ESP=7fd0f5573d38 EBP=000000000000
+                ECX=000000000001 DS=00000000 ESI=7fd0f5573e40 FS=00000033
+                EDX=000066266666 ES=00000000 EDI=7fd0f5573e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 10:22:04 GMT: start
+Wed, 27 Nov 2013 10:22:12 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:57481
+request       : /?profile
+----------------
+----------------
+Wed, 27 Nov 2013 10:22:12 GMT: 0x00007f6f44bc141d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 10333 "gwan" 0x00007f6f44bc141d in ?? ()
+
+Thread 1 (process 10333):
+#0  0x00007f6f44bc141d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 00006666666f
+
+Registers     : EAX=000066666667 CS=00000033 EIP=00000042fa72 EFLGS=000000010246
+                EBX=000000000001 SS=00000000 ESP=7f6f3f229d38 EBP=000000000000
+                ECX=000000000001 DS=00000000 ESI=7f6f3f229e40 FS=00000033
+                EDX=000066266666 ES=00000000 EDI=7f6f3f229e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 10:22:26 GMT: start
+Wed, 27 Nov 2013 10:22:36 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 1/2
+state         : SEND
+client        : 127.0.0.1:58249
+request       : /?profile
+----------------
+----------------
+Wed, 27 Nov 2013 10:22:36 GMT: warning: no loadable sections found in added symbol-file /home/fatih/gwan-retwis_3/gwan
+0x00007f1940ea341d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 10497 "gwan" 0x00007f1940ea341d in ?? ()
+
+Thread 1 (process 10497):
+#0  0x00007f1940ea341d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 1
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 00006666666f
+
+Registers     : EAX=000066666667 CS=00000033 EIP=00000042fa72 EFLGS=000000010246
+                EBX=000000000001 SS=00000000 ESP=7f193ab0bd38 EBP=000000000000
+                ECX=000000000001 DS=00000000 ESI=7f193ab0be40 FS=00000033
+                EDX=000066266666 ES=00000000 EDI=7f193ab0be48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 10:22:38 GMT: start
+Wed, 27 Nov 2013 10:23:54 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:23:55 GMT: start
+Wed, 27 Nov 2013 10:26:21 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:26:22 GMT: start
+Wed, 27 Nov 2013 10:28:37 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:28:38 GMT: start
+Wed, 27 Nov 2013 10:30:30 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:30:31 GMT: start
+Wed, 27 Nov 2013 10:32:19 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:32:20 GMT: start
+Wed, 27 Nov 2013 10:34:29 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:34:30 GMT: start
+Wed, 27 Nov 2013 10:38:58 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:39:24 GMT: start
+Wed, 27 Nov 2013 10:39:51 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 10:39:52 GMT: start
+Wed, 27 Nov 2013 14:53:48 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 14:53:49 GMT: start
+Wed, 27 Nov 2013 14:54:26 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 14:54:27 GMT: start
+Wed, 27 Nov 2013 14:55:29 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 14:55:30 GMT: start
+Wed, 27 Nov 2013 14:55:58 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 14:55:59 GMT: start
+Wed, 27 Nov 2013 14:56:23 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 14:56:24 GMT: start
+Wed, 27 Nov 2013 14:57:48 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 14:57:50 GMT: start
+Wed, 27 Nov 2013 14:58:26 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 14:58:27 GMT: start
+Wed, 27 Nov 2013 15:00:11 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:00:13 GMT: start
+Wed, 27 Nov 2013 15:01:15 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:01:16 GMT: start
+Wed, 27 Nov 2013 15:05:26 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:05:27 GMT: start
+Wed, 27 Nov 2013 15:06:01 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:06:06 GMT: start
+Wed, 27 Nov 2013 15:08:00 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:08:01 GMT: start
+Wed, 27 Nov 2013 15:09:06 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:09:07 GMT: start
+Wed, 27 Nov 2013 15:09:54 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:09:55 GMT: start
+Wed, 27 Nov 2013 15:11:02 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:11:03 GMT: start
+Wed, 27 Nov 2013 15:19:36 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:19:37 GMT: start
+Wed, 27 Nov 2013 15:19:37 GMT: exit(1): Error(s) in del_post.c
+Wed, 27 Nov 2013 15:20:57 GMT: start
+Wed, 27 Nov 2013 15:20:57 GMT: exit(1): Error(s) in del_post.c
+Wed, 27 Nov 2013 15:21:47 GMT: start
+Wed, 27 Nov 2013 15:23:17 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:23:19 GMT: start
+Wed, 27 Nov 2013 15:23:22 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:23:39 GMT: start
+Wed, 27 Nov 2013 15:24:25 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:24:26 GMT: start
+Wed, 27 Nov 2013 15:42:20 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:42:21 GMT: start
+Wed, 27 Nov 2013 15:43:21 GMT: start
+Wed, 27 Nov 2013 15:44:32 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:44:33 GMT: start
+Wed, 27 Nov 2013 15:44:34 GMT: exit(1): Error(s) in profile.c
+Wed, 27 Nov 2013 15:44:41 GMT: start
+Wed, 27 Nov 2013 15:45:13 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:45:14 GMT: start
+Wed, 27 Nov 2013 15:46:21 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:46:22 GMT: start
+Wed, 27 Nov 2013 15:47:40 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:47:41 GMT: start
+Wed, 27 Nov 2013 15:48:09 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:48:10 GMT: start
+Wed, 27 Nov 2013 15:49:46 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:49:47 GMT: start
+Wed, 27 Nov 2013 15:50:52 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:50:53 GMT: start
+Wed, 27 Nov 2013 15:52:38 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:52:39 GMT: start
+Wed, 27 Nov 2013 15:53:52 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:53:53 GMT: start
+Wed, 27 Nov 2013 15:55:09 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:55:10 GMT: start
+Wed, 27 Nov 2013 15:57:05 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 15:57:06 GMT: start
+Wed, 27 Nov 2013 16:00:07 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:00:08 GMT: start
+Wed, 27 Nov 2013 16:00:40 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:00:41 GMT: start
+Wed, 27 Nov 2013 16:00:45 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:00:52 GMT: start
+Wed, 27 Nov 2013 16:01:47 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:01:48 GMT: start
+Wed, 27 Nov 2013 16:05:22 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:05:23 GMT: start
+Wed, 27 Nov 2013 16:17:05 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:17:06 GMT: start
+Wed, 27 Nov 2013 16:19:37 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:19:39 GMT: start
+Wed, 27 Nov 2013 16:22:04 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:22:05 GMT: start
+Wed, 27 Nov 2013 16:22:05 GMT: exit(1): 
+To run G-WAN, you must fix the error(s) or remove this Content-Type Handler.
+
+
+Wed, 27 Nov 2013 16:24:50 GMT: start
+Wed, 27 Nov 2013 16:25:41 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:25:43 GMT: start
+Wed, 27 Nov 2013 16:26:47 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:26:48 GMT: start
+Wed, 27 Nov 2013 16:27:54 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:28:23 GMT: start
+Wed, 27 Nov 2013 16:29:03 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:29:04 GMT: start
+Wed, 27 Nov 2013 16:39:22 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:39:23 GMT: start
+Wed, 27 Nov 2013 16:39:57 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:48268
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 16:39:57 GMT: 0x00007facc3d8b41d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 21371 "gwan" 0x00007facc3d8b41d in ?? ()
+
+Thread 1 (process 21371):
+#0  0x00007facc3d8b41d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a6da800
+
+Registers     : EAX=01429a6da7f8 CS=00000033 EIP=00000042fa72 EFLGS=000000010297
+                EBX=000000000002 SS=9a2da7f7 ESP=7facbe1eed38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a2da7f7 ESI=7facbe1eee40 FS=00000033
+                EDX=000000000000 ES=9a2da7f7 EDI=7facbe1eee48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 16:40:19 GMT: start
+Wed, 27 Nov 2013 16:41:55 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 1/2
+state         : SEND
+client        : 127.0.0.1:59532
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 16:41:55 GMT: 0x00007f421f00841d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 21547 "gwan" 0x00007f421f00841d in ?? ()
+
+Thread 1 (process 21547):
+#0  0x00007f421f00841d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 1
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a6da800
+
+Registers     : EAX=01429a6da7f8 CS=00000033 EIP=00000042fa72 EFLGS=000000010297
+                EBX=000000000002 SS=9a2da7f7 ESP=7f4218a6bd38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a2da7f7 ESI=7f4218a6be40 FS=00000033
+                EDX=000000000000 ES=9a2da7f7 EDI=7f4218a6be48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 16:42:44 GMT: start
+Wed, 27 Nov 2013 16:43:08 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:60300
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 16:43:08 GMT: 0x00007f4ebedc541d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 21738 "gwan" 0x00007f4ebedc541d in ?? ()
+
+Thread 1 (process 21738):
+#0  0x00007f4ebedc541d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a70efd8
+
+Registers     : EAX=01429a70efd0 CS=00000033 EIP=00000042fa72 EFLGS=000000010287
+                EBX=000000000002 SS=9a30efcf ESP=7f4eb9228d38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a30efcf ESI=7f4eb9228e40 FS=00000033
+                EDX=000000000000 ES=9a30efcf EDI=7f4eb9228e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 16:43:57 GMT: start
+Wed, 27 Nov 2013 16:44:37 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 1/2
+state         : SEND
+client        : 127.0.0.1:61580
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 16:44:37 GMT: warning: no loadable sections found in added symbol-file /home/fatih/gwan-retwis_3/gwan
+0x00007fc88500e41d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 21917 "gwan" 0x00007fc88500e41d in ?? ()
+
+Thread 1 (process 21917):
+#0  0x00007fc88500e41d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 1
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a720530
+
+Registers     : EAX=01429a720528 CS=00000033 EIP=00000042fa72 EFLGS=000000010293
+                EBX=000000000002 SS=9a320527 ESP=7fc87ea71d38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a320527 ESI=7fc87ea71e40 FS=00000033
+                EDX=000000000000 ES=9a320527 EDI=7fc87ea71e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 16:45:28 GMT: start
+Wed, 27 Nov 2013 16:53:41 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 16:53:42 GMT: start
+Wed, 27 Nov 2013 16:54:05 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 1/2
+state         : SEND
+client        : 127.0.0.1:3725
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 16:54:05 GMT: warning: no loadable sections found in added symbol-file /home/fatih/gwan-retwis_3/gwan
+0x00007f36691f141d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 22301 "gwan" 0x00007f36691f141d in ?? ()
+
+Thread 1 (process 22301):
+#0  0x00007f36691f141d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 1
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a7a6d88
+
+Registers     : EAX=01429a7a6d80 CS=00000033 EIP=00000042fa72 EFLGS=000000010287
+                EBX=000000000002 SS=9a3a6d7f ESP=7f3662c54d38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a3a6d7f ESI=7f3662c54e40 FS=00000033
+                EDX=000000000000 ES=9a3a6d7f EDI=7f3662c54e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 16:54:33 GMT: start
+Wed, 27 Nov 2013 16:54:53 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:10125
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 16:54:53 GMT: 0x00007f8f6838a41d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 22480 "gwan" 0x00007f8f6838a41d in ?? ()
+
+Thread 1 (process 22480):
+#0  0x00007f8f6838a41d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a7bc160
+
+Registers     : EAX=01429a7bc158 CS=00000033 EIP=00000042fa72 EFLGS=000000010297
+                EBX=000000000002 SS=9a3bc157 ESP=7f8f627edd38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a3bc157 ESI=7f8f627ede40 FS=00000033
+                EDX=000000000000 ES=9a3bc157 EDI=7f8f627ede48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 16:55:04 GMT: start
+Wed, 27 Nov 2013 16:55:25 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:12429
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 16:55:25 GMT: warning: no loadable sections found in added symbol-file /home/fatih/gwan-retwis_3/gwan
+0x00007fe86be5e41d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 22649 "gwan" 0x00007fe86be5e41d in ?? ()
+
+Thread 1 (process 22649):
+#0  0x00007fe86be5e41d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a7bc160
+
+Registers     : EAX=01429a7bc158 CS=00000033 EIP=00000042fa72 EFLGS=000000010297
+                EBX=000000000002 SS=9a3bc157 ESP=7fe8662c1d38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a3bc157 ESI=7fe8662c1e40 FS=00000033
+                EDX=000000000000 ES=9a3bc157 EDI=7fe8662c1e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 17:15:48 GMT: start
+Wed, 27 Nov 2013 17:16:10 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:13709
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 17:16:10 GMT: 0x00007f58cf39141d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 22946 "gwan" 0x00007f58cf39141d in ?? ()
+
+Thread 1 (process 22946):
+#0  0x00007f58cf39141d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a8f31f0
+
+Registers     : EAX=01429a8f31e8 CS=00000033 EIP=00000042fa72 EFLGS=000000010293
+                EBX=000000000002 SS=9a4f31e7 ESP=7f58c97f4d38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a4f31e7 ESI=7f58c97f4e40 FS=00000033
+                EDX=000000000000 ES=9a4f31e7 EDI=7f58c97f4e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 17:16:46 GMT: start
+Wed, 27 Nov 2013 17:17:07 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:14989
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 17:17:07 GMT: warning: no loadable sections found in added symbol-file /home/fatih/gwan-retwis_3/gwan
+0x00007fbad8cd641d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 23122 "gwan" 0x00007fbad8cd641d in ?? ()
+
+Thread 1 (process 23122):
+#0  0x00007fbad8cd641d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a900cb0
+
+Registers     : EAX=01429a900ca8 CS=00000033 EIP=00000042fa72 EFLGS=000000010297
+                EBX=000000000002 SS=9a500ca7 ESP=7fbad3139d38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a500ca7 ESI=7fbad3139e40 FS=00000033
+                EDX=000000000000 ES=9a500ca7 EDI=7fbad3139e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 17:18:05 GMT: start
+Wed, 27 Nov 2013 17:18:16 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 1/2
+state         : SEND
+client        : 127.0.0.1:20877
+request       : /?timeline
+----------------
+----------------
+Wed, 27 Nov 2013 17:18:16 GMT: 0x00007f28eda5041d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 23306 "gwan" 0x00007f28eda5041d in ?? ()
+
+Thread 1 (process 23306):
+#0  0x00007f28eda5041d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 1
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 01429a911a38
+
+Registers     : EAX=01429a911a30 CS=00000033 EIP=00000042fa72 EFLGS=000000010283
+                EBX=000000000002 SS=9a511a2f ESP=7f28e74b3d38 EBP=000000000000
+                ECX=7fffffbffffd DS=9a511a2f ESI=7f28e74b3e40 FS=00000033
+                EDX=000000000000 ES=9a511a2f EDI=7f28e74b3e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 17:18:50 GMT: start
+Wed, 27 Nov 2013 17:20:46 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 17:20:47 GMT: start
+Wed, 27 Nov 2013 17:21:53 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 17:21:55 GMT: start
+Wed, 27 Nov 2013 17:38:25 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 17:38:25 GMT: start
+Wed, 27 Nov 2013 23:15:24 GMT: start
+Wed, 27 Nov 2013 23:18:01 GMT: start
+Wed, 27 Nov 2013 23:39:34 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 23:39:35 GMT: start
+Wed, 27 Nov 2013 23:39:35 GMT: exit(1): Error(s) in del_post.c
+Wed, 27 Nov 2013 23:39:48 GMT: start
+Wed, 27 Nov 2013 23:40:14 GMT: start
+Wed, 27 Nov 2013 23:46:07 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 23:46:08 GMT: start
+Wed, 27 Nov 2013 23:51:46 GMT: start
+Wed, 27 Nov 2013 23:52:11 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:60815
+request       : /?followers
+----------------
+----------------
+Wed, 27 Nov 2013 23:52:11 GMT: warning: no loadable sections found in added symbol-file /home/fatih/gwan-retwis_3/gwan
+0x00007fab4a8ee41d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 5437 "gwan" 0x00007fab4a8ee41d in ?? ()
+
+Thread 1 (process 5437):
+#0  0x00007fab4a8ee41d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 00006666666f
+
+Registers     : EAX=000066666667 CS=00000033 EIP=00000042fa72 EFLGS=000000010246
+                EBX=000000000001 SS=00000000 ESP=7fab44b47d38 EBP=000000000000
+                ECX=000000000001 DS=00000000 ESI=7fab44b47e40 FS=00000033
+                EDX=000066266666 ES=00000000 EDI=7fab44b47e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 23:53:31 GMT: start
+Wed, 27 Nov 2013 23:53:58 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 23:54:00 GMT: start
+Wed, 27 Nov 2013 23:54:36 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 23:54:38 GMT: start
+Wed, 27 Nov 2013 23:55:32 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 1/2
+state         : SEND
+client        : 127.0.0.1:63631
+request       : /?followers
+----------------
+----------------
+Wed, 27 Nov 2013 23:55:32 GMT: 0x00007fab3dd9841d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 5942 "gwan" 0x00007fab3dd9841d in ?? ()
+
+Thread 1 (process 5942):
+#0  0x00007fab3dd9841d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 1
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 00006666666f
+
+Registers     : EAX=000066666667 CS=00000033 EIP=00000042fa72 EFLGS=000000010246
+                EBX=000000000001 SS=00000000 ESP=7fab375f1d38 EBP=000000000000
+                ECX=000000000001 DS=00000000 ESI=7fab375f1e40 FS=00000033
+                EDX=000066266666 ES=00000000 EDI=7fab375f1e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 23:55:53 GMT: start
+Wed, 27 Nov 2013 23:56:00 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 1/2
+state         : SEND
+client        : 127.0.0.1:65167
+request       : /?followers
+----------------
+----------------
+Wed, 27 Nov 2013 23:56:00 GMT: 0x00007fa3111e141d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 6125 "gwan" 0x00007fa3111e141d in ?? ()
+
+Thread 1 (process 6125):
+#0  0x00007fa3111e141d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 1
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 00006666666f
+
+Registers     : EAX=000066666667 CS=00000033 EIP=00000042fa72 EFLGS=000000010246
+                EBX=000000000001 SS=00000000 ESP=7fa30aa3ad38 EBP=000000000000
+                ECX=000000000001 DS=00000000 ESI=7fa30aa3ae40 FS=00000033
+                EDX=000066266666 ES=00000000 EDI=7fa30aa3ae48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wed, 27 Nov 2013 23:57:57 GMT: start
+Wed, 27 Nov 2013 23:58:33 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 23:58:35 GMT: start
+Wed, 27 Nov 2013 23:59:32 GMT: signal 2: Ctrl-C
+Wed, 27 Nov 2013 23:59:55 GMT: start
+Thu, 28 Nov 2013 00:01:14 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:01:15 GMT: start
+Thu, 28 Nov 2013 00:02:27 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:02:28 GMT: start
+Thu, 28 Nov 2013 00:02:47 GMT: signal 11: Address not mapped to object
+source        : 1:?
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:5520
+request       : /?followers
+----------------
+----------------
+Thu, 28 Nov 2013 00:02:47 GMT: 0x00007fdca8b6941d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 7397 "gwan" 0x00007fdca8b6941d in ?? ()
+
+Thread 1 (process 7397):
+#0  0x00007fdca8b6941d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 11:Address not mapped to object
+Signal src    : 1:.
+errno         : 0
+Thread        : 0
+Code   Pointer: 00000042fa72 (module:gwan, function:??, line:0)
+Access Address: 00006666666f
+
+Registers     : EAX=000066666667 CS=00000033 EIP=00000042fa72 EFLGS=000000010246
+                EBX=000000000001 SS=00000000 ESP=7fdca2dc2d38 EBP=000000000000
+                ECX=000000000001 DS=00000000 ESI=7fdca2dc2e40 FS=00000033
+                EDX=000066266666 ES=00000000 EDI=7fdca2dc2e48 CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Thu, 28 Nov 2013 00:03:44 GMT: start
+Thu, 28 Nov 2013 00:04:25 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:04:26 GMT: start
+Thu, 28 Nov 2013 00:06:11 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:06:13 GMT: start
+Thu, 28 Nov 2013 00:09:18 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:09:19 GMT: start
+Thu, 28 Nov 2013 00:10:01 GMT: start
+Thu, 28 Nov 2013 00:10:25 GMT: start
+Thu, 28 Nov 2013 00:10:42 GMT: start
+Thu, 28 Nov 2013 00:16:41 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:16:42 GMT: start
+Thu, 28 Nov 2013 00:16:42 GMT: exit(1): Error(s) in followings.c
+Thu, 28 Nov 2013 00:17:23 GMT: start
+Thu, 28 Nov 2013 00:17:24 GMT: exit(1): Error(s) in followings.c
+Thu, 28 Nov 2013 00:17:56 GMT: start
+Thu, 28 Nov 2013 00:17:56 GMT: exit(1): Error(s) in followings.c
+Thu, 28 Nov 2013 00:18:11 GMT: start
+Thu, 28 Nov 2013 00:18:59 GMT: start
+Thu, 28 Nov 2013 00:19:22 GMT: start
+Thu, 28 Nov 2013 00:24:23 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:24:26 GMT: start
+Thu, 28 Nov 2013 00:27:01 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:27:03 GMT: start
+Thu, 28 Nov 2013 00:27:40 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:27:41 GMT: start
+Thu, 28 Nov 2013 00:29:03 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:29:04 GMT: start
+Thu, 28 Nov 2013 00:31:15 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:31:16 GMT: start
+Thu, 28 Nov 2013 00:31:40 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:32:02 GMT: start
+Thu, 28 Nov 2013 00:32:36 GMT: signal 6: Abort
+source        : -6:tkill
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:36245
+request       : /?timeline
+----------------
+----------------
+Thu, 28 Nov 2013 00:32:36 GMT: 0x00007f064fff541d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 10285 "gwan" 0x00007f064fff541d in ?? ()
+
+Thread 1 (process 10285):
+#0  0x00007f064fff541d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 6:Abort
+Signal src    : -6:tkill
+errno         : 0
+Thread        : 0
+Code   Pointer: 7f064fa4cf77 (module:libc.so.6, function:gsignal, line:0)
+Access Address: 00000000282d
+
+Registers     : EAX=000000000000 CS=00000033 EIP=7f064fa4cf77 EFLGS=000000000206
+                EBX=000000000400 SS=00000000 ESP=7f064a147578 EBP=7f064a147fb0
+                ECX=ffffffffffffffff DS=00000000 ESI=0000000028c7 FS=00000033
+                EDX=000000000006 ES=00000000 EDI=00000000282d CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Thu, 28 Nov 2013 00:33:32 GMT: start
+Thu, 28 Nov 2013 00:33:40 GMT: signal 6: Abort
+source        : -6:tkill
+thread        : 0/2
+state         : SEND
+client        : 127.0.0.1:37525
+request       : /?timeline
+----------------
+----------------
+Thu, 28 Nov 2013 00:33:40 GMT: 0x00007f69de88c41d in ?? ()
+  Id   Target Id         Frame 
+* 1    process 10491 "gwan" 0x00007f69de88c41d in ?? ()
+
+Thread 1 (process 10491):
+#0  0x00007f69de88c41d in ?? ()
+#1  0x0000000000000000 in ?? ()
+
+Signal        : 6:Abort
+Signal src    : -6:tkill
+errno         : 0
+Thread        : 0
+Code   Pointer: 7f69de2e3f77 (module:libc.so.6, function:gsignal, line:0)
+Access Address: 0000000028fb
+
+Registers     : EAX=000000000000 CS=00000033 EIP=7f69de2e3f77 EFLGS=000000000202
+                EBX=000000000400 SS=00000000 ESP=7f69d89de578 EBP=7f69d89defb0
+                ECX=ffffffffffffffff DS=00000000 ESI=000000002996 FS=00000033
+                EDX=000000000006 ES=00000000 EDI=0000000028fb CS=00000033
+
+Module         :Function        :Line # PgrmCntr(EIP)  RetAddress  FramePtr(EBP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Thu, 28 Nov 2013 00:37:39 GMT: start
+Thu, 28 Nov 2013 00:38:09 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 00:38:10 GMT: start
+Thu, 28 Nov 2013 00:38:26 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 14:25:52 GMT: start
+Thu, 28 Nov 2013 14:26:02 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 14:26:06 GMT: start
+Thu, 28 Nov 2013 14:26:10 GMT: signal 2: Ctrl-C
+Thu, 28 Nov 2013 14:26:15 GMT: start
+Mon, 02 Dec 2013 14:34:04 GMT: start
+Mon, 02 Dec 2013 14:40:30 GMT: signal 2: Ctrl-C
