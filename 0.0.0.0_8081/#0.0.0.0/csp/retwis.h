@@ -497,7 +497,7 @@ if(pass_sha->ptr == NULL) printf("pass_sha->ptr is null\n");
 if(username == NULL) printf("username is null\n");
 if(rc == NULL) printf("rc is null\n");
 if(uid == 0) printf("(uid == 0)\n");
-printf("HMSET uid:%llu username %s pass %s\n"
+printf("HMSET uid:%lu username %s pass %s\n"
     , uid, username, pass_sha->ptr);
 
      redisReply *rr2 = redisCommand(rc,
@@ -531,11 +531,11 @@ LINE_
     xbuf_t *cookie_header = gw_gen_cookie_header(username, &cookie_buf);
     http_header(HEAD_ADD, cookie_header->ptr, cookie_header->len, argv);
 LINE_
-    rr2 = redisCommand(rc, "SET auth:%s %llu", cookie_buf->ptr, uid);
+    rr2 = redisCommand(rc, "SET auth:%s %lu", cookie_buf->ptr, uid);
 LINE_
     freeReplyObject(rr2);
 
-    rr2 = redisCommand(rc, "HSET uid:%llu auth %s", uid,  cookie_buf->ptr);
+    rr2 = redisCommand(rc, "HSET uid:%lu auth %s", uid,  cookie_buf->ptr);
 LINE_
     freeReplyObject(rr2);
 
@@ -796,22 +796,22 @@ int add_post (char *argv[], data_t *data, char *from, char *body, u64 *id_dst)
   freeReplyObject(rr);
   
   // add post to redis
-  rr = redisCommand(rc, "HMSET post:%llu user %s uid %s data %s time %d"
+  rr = redisCommand(rc, "HMSET post:%lu user %s uid %s data %s time %d"
      , id, username, from, body, time(0));
   freeReplyObject(rr);
   
   // add post to user's profile
-  rr = redisCommand(rc, "LPUSH uid:%s:posts %llu", from, id);
+  rr = redisCommand(rc, "LPUSH uid:%s:posts %lu", from, id);
   if(rr == NULL) return -1;
   freeReplyObject(rr);
 
   // add post to user's timeline
-  rr = redisCommand(rc, "LPUSH uid:%s:timeline %llu", from, id);
+  rr = redisCommand(rc, "LPUSH uid:%s:timeline %lu", from, id);
   if(rr == NULL) return -1;
   freeReplyObject(rr);
 
   // add post to global timeline
-  rr = redisCommand(rc, "LPUSH global:timeline %llu", id);
+  rr = redisCommand(rc, "LPUSH global:timeline %lu", id);
   if(rr == NULL) return -1;
   freeReplyObject(rr);
 
@@ -827,7 +827,7 @@ int add_post (char *argv[], data_t *data, char *from, char *body, u64 *id_dst)
   for(int i = 0; i < rr->elements; i++)
   {
     redisReply *rr2 = redisCommand(rc,
-      "LPUSH uid:%s:timeline %llu", rr->element[i]->str, id);
+      "LPUSH uid:%s:timeline %lu", rr->element[i]->str, id);
     freeReplyObject(rr2);
   }
   freeReplyObject(rr);
@@ -837,7 +837,7 @@ int add_post (char *argv[], data_t *data, char *from, char *body, u64 *id_dst)
 void del_post(char *argv[], data_t *data, char *uid, u64 id)
 {
   redisContext *rc = data->rc[cur_worker()];
-  redisReply *rr = redisCommand(rc, "HGET post:%llu uid", id);
+  redisReply *rr = redisCommand(rc, "HGET post:%lu uid", id);
   {
     if(rr->str == NULL) return;
     redisReply *rr2 = redisCommand(rc,
@@ -846,7 +846,7 @@ void del_post(char *argv[], data_t *data, char *uid, u64 id)
     {
       if(rr2->element[0]->str == NULL) continue;
       redisReply *rr3 = redisCommand(rc,
-       "LREM uid:%s:timeline 1 %llu", rr2->element[i]->str, id);
+       "LREM uid:%s:timeline 1 %lu", rr2->element[i]->str, id);
       freeReplyObject(rr3);
     }
     freeReplyObject(rr2);
@@ -855,22 +855,22 @@ void del_post(char *argv[], data_t *data, char *uid, u64 id)
 
   // delete from user's timeline
   rr = redisCommand(rc,
-       "LREM uid:%s:timeline 1 %llu", uid, id);
+       "LREM uid:%s:timeline 1 %lu", uid, id);
   freeReplyObject(rr);
 
   // delete from user's profile
   rr = redisCommand(rc,
-       "LREM uid:%s:posts 1 %llu", uid, id);
+       "LREM uid:%s:posts 1 %lu", uid, id);
   freeReplyObject(rr);
 
   // delete from global timeline
   rr = redisCommand(rc,
-       "LREM global:timeline 1 %llu", id);
+       "LREM global:timeline 1 %lu", id);
   freeReplyObject(rr);
 
   // delete from post
   rr = redisCommand(rc,
-       "DEL post:%llu", id);
+       "DEL post:%lu", id);
   freeReplyObject(rr);
 }
 
